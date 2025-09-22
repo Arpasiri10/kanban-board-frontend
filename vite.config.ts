@@ -1,11 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: '/kanban-board-frontend/',
-  build: {
-    outDir: 'docs',
-  },
+export default defineConfig(({ mode }) => {
+  const base = mode === 'production' 
+    ? '/kanban-board-frontend/'  // GitHub Pages
+    : './'                        // local dev server
+
+  return {
+    plugins: [react()],
+    base,
+    build: {
+      outDir: 'docs',
+    },
+  }
 })

@@ -82,7 +82,7 @@ npm install
 npm run dev
 ```
 
-3. เปิดเบราว์เซอร์ไปที่ `http://localhost:5173/kanban-board/`
+3. เปิดเบราว์เซอร์ไปที่ `http://localhost:5174/`
 
 ## การใช้งาน
 
